@@ -24,7 +24,8 @@
         <li><a href="http://www..../faq">Questions</a></li>
         <li><a href="http://www..../news">News</a></li>
         <li><a href="http://www..../contact">Contact</a></li>
-        <li>puts "The current time is " + time1.inspect </li>
+        <li><a>Today is <%= Time.now.strftime("%b %e") %></a> </li>
+        <li><a>The time is <%= Time.now.strftime("%l:%M %p")  %></a> </li>
       </ul>
     </div>
     <div id="main">
