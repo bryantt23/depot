@@ -17,15 +17,16 @@
   <div id="columns">
     <div id="side">
 <!-- START_HIGHLIGHT -->
-      <div id="cart">
+      <!-- START:hidden_div -->
+      <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
         <%= render @cart %>
-      </div>
+      <% end %>
+    <!-- END:hidden_div -->
 
 <!-- END_HIGHLIGHT -->
       <ul>
       	<!-- http://stackoverflow.com/questions/6791309/simple-link-to-from-root-url -->
         <li><%=link_to "Home", store_path %></li>
-        <li><a href="http://www....">Home</a></li>
         <li><a href="http://www..../faq">Questions</a></li>
         <li><a href="http://www..../news">News</a></li>
         <li><a href="http://www..../contact">Contact</a></li>
@@ -37,3 +38,4 @@
   </div>
 </body>
 </html>
+
